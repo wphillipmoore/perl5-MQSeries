@@ -304,6 +304,8 @@ sub _setEndianess {
 
 __END__
 
+=encoding ISO-8859-1
+
 =head1 NAME
 
 MQSeries::Message::IIH -- Class to send/receive IMS Bridge Header (IIH) messages
