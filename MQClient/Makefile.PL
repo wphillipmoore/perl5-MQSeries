@@ -192,6 +192,7 @@ foreach $file ( sort keys %filemap ) {
 
                 foreach my $header ( grep(/cmqc\.h$/,@headers),
                                      grep(!/cmqc\.h$/,@headers) ) {
+                    next if $header =~ /cmqstrc\.h/;
                     my $filename = basename($header);
                     print OUT "#include <$filename>\n";
                 }
