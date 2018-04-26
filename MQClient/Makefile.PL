@@ -94,6 +94,8 @@ if ( $mqmtop =~ /\s/ ) {
 # different for single- and multi-threaded apps.  NB: other platforms
 # includes windows.
 #
+my %extra_args;
+
 $libs = "$libdir " .
     [
      # MQServer / MQClient
@@ -270,7 +272,6 @@ close(TYPEMAP);
 #
 # Collect optional WriteMakefile args in here...
 #
-my %extra_args;
 if ($Config{archname} =~ /-object\b/i) {
     #
     # On Win32, we need to force the use of the CAPI with
